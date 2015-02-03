@@ -1,0 +1,33 @@
+{  
+  "name": "flexboxgrid-less",
+  "version": "0.0.1",
+  "description": "Less code for the gridsystem of flexboxgrid.com",
+  "homepage": "https://github.com/bassjobsen/flexboxgrid-less",
+  "author": {
+    "name": "Bass Jobsen",
+    "email": "bass@w3masters.nl"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/bassjobsen/flexboxgrid-less/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bassjobsen/flexboxgrid-less.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache v2",
+      "url": "https://github.com/bassjobsen/flexboxgrid-less/LICENSE"
+    }
+  ],
+  "keywords": [
+    "grid",
+    "less",
+    "ccs3",
+    "flexbox",
+    "flexboxgrid.com",
+    "grid system",
+    "responsive grid system"
+  ]
+}
