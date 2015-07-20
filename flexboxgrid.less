@@ -1,5 +1,5 @@
 // Core variables and mixins
-@import "variables.less";
+// @import "variables.less"; can't seem to override variables in Hubrick LESS
 @import "mixins.less";
 
 //default breakpoints
@@ -37,7 +37,7 @@
 
 .for-each(@col-breaks);
 .-each(@breakpoint) {
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: @breakpoint) {
     .makegrid(extract(@col-names, @i));
   }
 }
