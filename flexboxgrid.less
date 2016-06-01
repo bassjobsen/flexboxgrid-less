@@ -2,17 +2,6 @@
 @import "variables.less"; //can't seem to override variables in Hubrick LESS
 @import "mixins.less";
 
-//default breakpoints
-@xl-break: 1675px;
-@l-break: 1300px;
-@m-break: 985px;
-@s-break: 650px;
-
-//default sizings
-@col-names: sm, md, lg;
-@col-breaks: @s-break, @m-break, @l-break;
-
-
 .grid {
   padding-right: @outer-margin;
   padding-left: @outer-margin;
@@ -33,11 +22,23 @@
    .col-reverse();
 }
 
-.makegrid(xs);
+.flexboxgrid(@sb, @mb, @lb, @xlb) {
+  @xl-break: @xlb;
+  @l-break: @lb;
+  @m-break: @mb;
+  @s-break: @sb;
 
-.for-each(@col-breaks);
-.-each(@breakpoint) {
-  @media only screen and (min-width: @breakpoint) {
-    .makegrid(extract(@col-names, @i));
+  //default sizings
+  @col-names: sm, md, lg;
+  @col-breaks: @s-break, @m-break, @l-break;
+
+  .makegrid(xs);
+
+  .for-each(@col-breaks);
+  .-each(@breakpoint) {
+    @media only screen and (min-width: @breakpoint) {
+      .makegrid(extract(@col-names, @i));
+    }
   }
 }
+
